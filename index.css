@@ -1,6 +1,15 @@
+.form,
+.greeting {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
 body {
-  background-color: darkblue;
-  color: white;
+  background-color: rgb(211, 211, 211);
+  color: rgb(70, 69, 69);
 }
 
 .btn {
