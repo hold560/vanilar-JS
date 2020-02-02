@@ -27,7 +27,7 @@ function deleteToDo(event) {
   saveToDos();
 }
 
-//#4 save todos
+//#3 save todos
 function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
   //JSON.stringify is used to change object into string

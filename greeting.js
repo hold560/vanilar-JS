@@ -10,7 +10,7 @@ getElementById*/
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
 
-//#6 create event saving name records in local storage
+//#6 save name record in local storage
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
 }
