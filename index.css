@@ -1,57 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Sriracha&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(99, 99, 99);
+  color: white;
+  font-family: Sriracha;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 .form,
 .greeting {
   display: none;
-  position: relative;
 }
 .showing {
   display: block;
 }
 
-.input__name,
-.input__toDo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .greeting {
   font-size: 30px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-}
-
-body {
-  background-color: rgb(99, 99, 99);
-  color: white;
-  font-family: Sriracha;
-  width: 100%;
-  height: 100%;
-}
-
-.btn {
-  cursor: pointer;
-}
-
-.js-clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 input {
-  font-style: 30px;
-  padding: 10px 30px;
+  padding: 10px 16px;
+  margin: 32px;
 }
 
 .toDoList li {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
+  list-style: none;
+}
+
+.toDoList li > button {
+  margin-right: 4px;
 }
 
 .js-weather {
@@ -66,10 +53,6 @@ h1 {
   color: white;
   transition: color 0.5s ease-in-out;
   font-size: 80px;
-}
-
-.clicked {
-  color: gray;
 }
 
 .bgImage {
