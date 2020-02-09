@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Sriracha&display=swap");
+
+.form,
+.greeting {
+  display: none;
+}
+
 .form,
 .greeting {
   display: none;
@@ -10,16 +17,49 @@
 body {
   background-color: rgb(99, 99, 99);
   color: white;
+  font-family: Sriracha;
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
   cursor: pointer;
 }
 
+.js-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-style: 30px;
+  padding: 10px 30px;
+  margin: 20px;
+}
+
+.greeting {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.toDoList li {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.js-weather {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  color: lightblue;
+}
+
 h1 {
   color: white;
   transition: color 0.5s ease-in-out;
-  font-size: 30px;
+  font-size: 80px;
 }
 
 .clicked {

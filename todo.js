@@ -11,23 +11,24 @@ function filterFn(toDo) {
 
 //#3 save and array toDos
 
-let toDos = [];
+let toDos = []; //empty at the beginning
 
 //#4 activate delete function to delete items from local storage as well
 
 function deleteToDo(event) {
   const btn = event.target;
-  const li = btn.parentNode;
+  //console.dir(event);
+  const li = btn.parentNode; // to get the father of btn
   toDoList.removeChild(li);
   const cleanToDos = toDos.filter(function(toDo) {
-    return toDo.id !== parseInt(li.id); //change li.id into number
+    return toDo.id !== parseInt(li.id); //change li.id(string) into number
   }); // they give an array of items that pass a check from filter function
   console.log(cleanToDos);
   toDos = cleanToDos;
   saveToDos();
 }
 
-//#3 save todos
+//#3 save todos : LS only can save string data
 function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
   //JSON.stringify is used to change object into string
@@ -38,7 +39,7 @@ function paintToDo(text) {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
   const span = document.createElement("span");
-  const newId = toDos.length + 1;
+  const newId = toDos.length + 1; //length of object in array
   delBtn.innerText = "X";
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
