@@ -35,7 +35,7 @@ function handleGeoSuccess(position) {
     longitude
   };
   saveCoords(coordsObj);
-  getWeather(latitude.longitude);
+  getWeather(latitude, longitude);
 }
 
 //#4 when getting Geo fails
